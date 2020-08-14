@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      let playerScore = 0;
+      let computerScore = 0;
+
+      function computerPlay() {
+        const moves = ['rock', 'paper', 'scissors'];
+        const choice = Math.floor(Math.random()*3);
+        return moves[choice];
+      }
+
+      function playRound(playerSelection) {
+        var computerSelection = computerPlay();
+        var result;
+
+        if (playerSelection == computerSelection) {
+          return "draw!"
+        } else {
+          if (playerSelection == 'rock' && computerSelection == 'scissors'
+            || playerSelection == 'scissors' && computerSelection == 'paper'
+            || playerSelection == 'paper' && computerSelection == 'rock') {
+            playerScore += 1;
+            return "you win! " + playerSelection + " beats " + computerSelection;
+          } else {
+            computerScore += 1;
+            return "you lose! " + computerSelection + " beats " + playerSelection;
+          }
+        }
+      }
+
+
+      function game(playerSelection, computerSelection) {
+        for (let i = 0; i < 5; i++) {
+          playerSelection = prompt("choose your move").toLowerCase();
+          console.log(playRound(playerSelection));
+          console.log("your score: " + playerScore + " computer score: " + computerScore)
+        }
+      }
+
+
+      game();
+
+    </script>
+  </body>
+</html>

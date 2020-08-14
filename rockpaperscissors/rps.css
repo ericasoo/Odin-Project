@@ -1,0 +1,23 @@
+body {
+  text-align: center;
+  color: deeppink;
+  background-color: #CFEEFA;
+}
+
+
+.btn {
+  font-style: hidden;
+}
+
+#moves {
+  text-align: center;
+}
+
+#imgContainer {
+  width: 110px;
+  height: 125px;
+  border: solid 1px darkgrey;
+  margin: 0 auto;
+  border-radius: 2px;
+  background-color: lightgrey;
+}
