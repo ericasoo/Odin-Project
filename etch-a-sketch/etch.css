@@ -1,0 +1,19 @@
+* {
+  text-align: center;
+  color: deeppink;
+}
+
+.cell {
+  display: inline-block;
+}
+
+.row {
+    display: flex;
+}
+
+#container {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 525px;
+    height: 525px;
+}
