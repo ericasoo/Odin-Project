@@ -60,7 +60,6 @@ createGrid(cells);
 function handleClick(event) {
   let e = event.currentTarget;
   if (e.id === 'reset') {
-    mode = 1;
     createGrid(cells);
   }
   else if (e.id === 'normal') {mode = 1}
